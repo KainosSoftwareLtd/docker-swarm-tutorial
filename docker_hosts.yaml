@@ -2,10 +2,13 @@
 hosts:
   - name: manager1
     ip: '192.168.99.100'
+    provision: 'docker swarm init --listen-addr 192.168.99.100:2377'
 
   - name: worker1
     ip: '192.168.99.101'
+    provision: 'docker swarm join 192.168.99.100:2377'
 
   - name: worker2
     ip: '192.168.99.102'
+    provision: 'docker swarm join 192.168.99.100:2377'
 
