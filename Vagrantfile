@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
   hosts.each do |host|
     config.vm.define host['name'] do |c|
       c.vm.network :private_network, ip: host['ip'], netmask: '255.255.255.0'
+      c.vm.hostname = host['name']
     end
   end
 end
