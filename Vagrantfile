@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
       c.vm.network :private_network, ip: host['ip'], netmask: '255.255.255.0'
       c.vm.hostname = host['name']
       c.vm.provision "shell", inline: host['provision']
+      c.vm.synced_folder "./exports/", "/docker_files/"
     end
   end
 end
