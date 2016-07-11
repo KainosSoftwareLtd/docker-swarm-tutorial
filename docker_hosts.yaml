@@ -1,0 +1,11 @@
+---
+hosts:
+  - name: manager1
+    ip: '192.168.99.100'
+
+  - name: worker1
+    ip: '192.168.99.101'
+
+  - name: worker2
+    ip: '192.168.99.102'
+
